@@ -25,6 +25,12 @@ main {
    background-color: var(--Very-Dark-Blue);
 }
 .rating_component {
+    display: none;
+}
+.rating_component.active {
+    display: block;
+}
+.rating_component {
     width: 23rem;
     max-width: 85%;
     height: 23rem;
@@ -33,6 +39,7 @@ main {
     background: linear-gradient(var(--Dark-Blue), hsl(215deg, 21%, 11%));
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
+
 .icon, .text, .ratings_container {
     margin-bottom: 28px;
 }
@@ -41,13 +48,14 @@ main {
     margin-bottom: 10px;
 }
 .text h5 {
-    color: var(--Light-Grey);
+    color: var(--Medium-Grey);
     font-size: 15px;
-
+    font-weight: 400;
 }
 .ratings_container {
     display: flex;
     justify-content: space-between;
+    gap: .4rem;
 }
 .ratings, .icon div {
     width: 45px;
@@ -61,7 +69,7 @@ main {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     transition: background-color 0.3s linear;
 }
-.ratings, button {
+.ratings, .submit {
     cursor: pointer;
     border: none;
     font-family: 'Overpass', sans-serif;
@@ -75,7 +83,8 @@ main {
     background-color: var(--Orange);
     color: var(--White);
     letter-spacing: 3px;
-    transition: background-color 0.5s, color 0.5s;
+    transition: all 1s ease-in-out;
+   
 }
 .ratings:hover {
     background-color: var(--Medium-Grey);
@@ -85,7 +94,48 @@ main {
     background-color: var(--Orange);
     color: var(--White);
 }
-.submit:focus {
+
+.submit:hover {
+    box-shadow: 0px 8px 12px 0 rgba(255,255,255, 0.35);
     background-color: var(--White);
     color: var(--Orange);
+    height: 60px;
 }
+
+
+
+/* THANK YOU STATE */
+
+.hidden {
+    display: none;
+}
+
+.thank_you-state .icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.what_selected div {
+    background-color: var(--Dark-Blue);
+    color: var(--Orange);
+    border-radius: 20px;
+    width: 10rem;
+    height: 28px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.what_selected h5 {
+    font-weight: 400;
+}
+
+.thank_you-state .text {
+    text-align: center;
+}
+.thank_you-state .icon, .what_selected div, .thank_you-state .text {
+    margin-bottom: 30px;
+}
+
+
+
