@@ -24,10 +24,8 @@ main {
     width: 100vw;
    background-color: var(--Very-Dark-Blue);
 }
-.rating_component {
-    display: none;
-}
-.rating_component.active {
+
+.active {
     display: block;
 }
 .rating_component {
@@ -119,7 +117,7 @@ main {
     background-color: var(--Dark-Blue);
     color: var(--Orange);
     border-radius: 20px;
-    width: 10rem;
+    width: 12rem;
     height: 28px;
     margin: 0 auto;
     display: flex;
